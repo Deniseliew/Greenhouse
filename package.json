@@ -8,14 +8,19 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "solc": "^0.8.0",
+    "truffle": "^5.5.14",
+    "web-vitals": "^2.1.4",
+    "web3": "^4.15.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "start": "npm run copy-contracts && react-scripts start",
+  "build": "npm run copy-contracts && react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "copy-contracts": "xcopy \"build\\contracts\\*.json\" \"public\\contractData\" /Y"
   },
   "eslintConfig": {
     "extends": [
